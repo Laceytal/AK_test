@@ -1,7 +1,7 @@
 package main
 
 import (
-	"aktest/internal/AK"
+	"aktest/internal/ak"
 	"fmt"
 	"net/http"
 )
@@ -14,7 +14,7 @@ func main() {
 		fmt.Fprintf(w, "Hello Gevorg!")
 	})
 	http.HandleFunc("/AK", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, AK.SymFunc())
+		fmt.Fprintf(w, ak.SymFunc())
 	})
 	http.ListenAndServe(":8080", nil)
 }
